@@ -75,16 +75,20 @@ function move(element) {
             if (e.key === 'ArrowDown') {
                 direction = 'south'
             }
-            callback(direction)
-
+            // bonus* if callback is passed, it will call back the direction
+            if (callback) {
+                callback(direction)
+            }
         })
 
         // when arrow key is not being pressed element will stop moving
         document.addEventListener('keyup', function(e) {
 
             direction = null
-            callback(direction)
-
+                // bonus* if callback is passed, it will call back the direction
+            if (callback) {
+                callback(direction)
+            }
         })
 
     }

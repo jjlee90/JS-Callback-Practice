@@ -26,6 +26,7 @@ function handleDirectionChange(direction) {
 }
 move(character).withArrowKeys(100, 250, handleDirectionChange)
 
+// bonus testing callback error
 // let tree = newImage('assets/tree.png')
 // move(tree).withArrowKeys(200, 450)
 // tree.style.zIndex = 1
